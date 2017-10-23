@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id=""></canvas>
+    <script>
+        var data = [
+            {title:'15-20岁',
+            num :12
+            },
+            {title:'20-25岁',num:30},
+            {title:'25-30岁',num:22},
+            {title:'30-35岁',num:10},
+            {title:'35-100岁',num:12},
+        ];
+
+        var canvas = document.querySelector('canvas');
+            canvas.width = 600;
+            canvas.height = 400;
+            canvas.style.border = '1px solid #ff0000';
+        var context = canvas.getContext('2d');
+
+        var PiChart = function () {
+            this.width = canvas.width;
+            this.height = canvas.height;
+            this.context = context;
+            this.zeroX = this.width/2;
+            this.zeroY = this.height/2;
+
+            this.radius = 150;
+            this.outLine = 20;
+        }
+
+        PiChart.prototype.getRandomColor = function (){
+            var r = Math.floor(Math.random() * 256);
+            
+        }
+    </script>
+</body>
+</html>
